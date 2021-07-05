@@ -1,5 +1,6 @@
 package stepDef;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -32,7 +33,7 @@ public class Hook {
 		System.out.println("\n" + Instant.now().toString() + " Initializing the setup");
 
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Pooja\\eclipse-workspace\\scantist_ui_automation\\Drivers\\chromedriver.exe");
+				System.getProperty("user.dir")+"//Drivers//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 
 		options.addArguments(Constant.START_MAXIMIZED);
@@ -49,8 +50,11 @@ public class Hook {
 
 		driver = new ChromeDriver(options);
 		
-		Properties prop=new Properties(); 
-		FileInputStream ip= new FileInputStream("C:\\Users\\Pooja\\eclipse-workspace\\scantist_ui_automation\\src\\test\\java\\testData\\staging.properties"); 
+	//	Properties prop=new Properties(); 
+		
+	//	FileInputStream ip = new FileInputStream("/DataPatchScript/src/main/java/testData/staging.properties");
+		
+		//FileInputStream ip= new FileInputStream("C:\\Users\\Pooja\\eclipse-workspace\\scantist_ui_automation\\src\\test\\java\\testData\\staging.properties"); 
 	//	FileInputStream ip= new FileInputStream("C:\\Users\\Pooja\\eclipse-workspace\\scantist_ui_automation\\src\\test\\java\\testData\\deputy.properties"); 
 
     	//  FileInputStream ip= new FileInputStream("C:\\Users\\Pooja\\eclipse-workspace\\scantist_ui_automation\\src\\test\\java\\testData\\prod.properties");
@@ -59,9 +63,9 @@ public class Hook {
 
 	//	FileInputStream ip= new FileInputStream("C:\\Users\\Pooja\\eclipse-workspace\\scantist_ui_automation\\src\\test\\java\\testData\\on-prem.properties");
 
-	    prop.load(ip);
+	 //   prop.load(ip);
 		  		 
-	  String baseUrl = prop.getProperty("stagingUrl");
+	  String baseUrl = "https://staging.scantist.io";
 	 // String baseUrl = prop.getProperty("deputyUrl");
 
 		 

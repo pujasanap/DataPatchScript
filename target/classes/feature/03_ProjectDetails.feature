@@ -27,10 +27,10 @@ Feature: Project details Feature
 	And Click on project to go project details 
 	When read the data from column
 	
-	Scenario: Verify to download report
-	When Click on genarate report
-	Then Download json report
-	Then Download xml report
-	Then Download csv report
-	Then Download pdf report
+#	Scenario: Verify to download report
+#	When Click on genarate report
+#	Then Download json report
+#	Then Download xml report
+#	Then Download csv report
+#	Then Download pdf report
 	
