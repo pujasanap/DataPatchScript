@@ -3,7 +3,8 @@
 
 1. Clone the project 
 2. execute the POM.xml using below command
-   mvn test
+  
+  mvn test
 
 Note : POM.xml will execute the whole script
 
