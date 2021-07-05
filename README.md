@@ -1,6 +1,5 @@
 # DataPatchScript
 
-Data patch script
 
 1. Clone the project 
 2. execute the POM.xml
